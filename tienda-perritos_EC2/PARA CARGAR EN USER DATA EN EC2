@@ -1,0 +1,12 @@
+#!/bin/bash
+# Log de user data
+sudo exec > /var/log/user-data.log 2>&1
+sudo set -x
+
+# Actualizar paquetes e instalar Docker (Amazon Linux 2 / 2023)
+sudo yum update -y
+sudo yum install -y docker
+
+# Habilitar y arrancar Docker
+sudo systemctl enable docker
+sudo systemctl start docker
