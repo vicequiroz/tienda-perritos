@@ -67,3 +67,36 @@ La arquitectura productiva en la nube se encuentra desplegada de manera distribu
 
 Esta división física y lógica garantiza que, aunque un actor externo interactúe con la interfaz de la tienda en el navegador web, jamás podrá tener acceso o visibilidad directa hacia el backend o las tablas de datos relacionales, cumpliendo a cabalidad con las políticas de seguridad informática exigidas por Tienda Perritos.
 
+---
+
+## 8. Anexo: Evidencias Fotográficas del Proyecto (IE8)
+
+A continuación, se adjuntan las capturas de pantalla que respaldan la correcta ejecución, configuración y despliegue del stack tecnológico del proyecto según lo requerido en las guías de laboratorio:
+
+### A. Estructura del Proyecto en GitHub
+Muestra la organización de los directorios de microservicios (`frontend/`, `backend/`, `db/`) y la centralización de la carpeta de evidencias en la raíz del repositorio.
+![Estructura del Repositorio](./evidencias/git_tienda_perritos.png)
+
+### B. Configuración de Variables y GitHub Secrets
+Muestra el set de credenciales encriptadas de AWS Academy y las variables de los repositorios cargadas de forma segura en la pestaña de Actions.
+![GitHub Secrets Configurados](./evidencias/repository_secrets.png)
+
+### C. Almacenamiento de Imágenes en Amazon ECR
+Muestra los repositorios privados creados dentro de Amazon Elastic Container Registry con sus respectivas imágenes y versiones.
+![Repositorios en Amazon ECR](./evidencias/amazonECR.png)
+
+### D. Ejecución Correcta del Pipeline (GitHub Actions)
+Evidencia visual del workflow ejecutado con éxito (en verde), gatillado tras el evento de push en la rama de despliegue.
+![Pipeline Exitoso Actions](./evidencias/git_actions.png)
+
+### E. Contenedores Operativos en Instancias AWS EC2
+Captura de la terminal SSH ejecutando el comando `docker ps`, validando que los contenedores se encuentran levantados y mapeados en sus correspondientes puertos.
+![Contenedores Activos en EC2](./evidencias/instancias.png)
+![Contenedores Activos en EC2](./evidencias/front_ec2perritos.png)
+![Contenedores Activos en EC2](./evidencias/back_ec2perritos.png)
+![Contenedores Activos en EC2](./evidencias/bd_ec2perritos.png)
+
+### F. Validación Funcional de la Aplicación en el Navegador
+Demostración de la interfaz web de la "Tienda de Perritos" cargada con éxito a través de la IP de la instancia, consumiendo las API y renderizando los datos relacionales.
+![Aplicación en Producción](./evidencias/Pagina_web_TiendaPerritos.png)
+
